@@ -1,0 +1,69 @@
+body{
+    background: rgb(189, 150, 150);
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+nav{
+    background: rgb(175, 14, 47);
+    padding: 20px 30px;
+    height: 60px;
+}
+nav label.logo{
+    color: rgb(7, 6, 6);
+    font-size: 20px;
+    float: left;
+    line-height: 60px;
+}
+nav ul{
+    margin-left:200px ;
+    float: right;
+    line-height: 60px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+nav ul li a{
+    color:  rgb(10, 10, 9);
+    font-size: 18px;
+}
+.bar-btn{
+    color: rgb(11, 11, 11);
+    font-size: 20px;
+    float: right;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+nav ul li a:hover,.active{
+    color: rgb(242, 9, 137);
+}
+@media(max-width:992px){
+    .bar-btn{
+        display: block;
+    }
+    nav ul{
+        background: rgb(176, 193, 194);
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: -1000px;
+        top: 100px;
+        margin-left: 0;
+        text-align: center;
+        transition: 0.5s;
+    }
+    nav ul li{
+        display: block;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
